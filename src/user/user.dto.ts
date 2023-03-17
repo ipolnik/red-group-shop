@@ -7,10 +7,12 @@ export class UserDto {
     @IsString()
     @IsOptional()
     password?: string
-
+    
+    @IsOptional()
     @IsString()
     name: string
 
+    @IsOptional()
     @IsString()
     avatarPath: string
 

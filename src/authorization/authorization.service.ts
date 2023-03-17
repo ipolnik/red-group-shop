@@ -60,7 +60,6 @@ export class AuthorizationService {
      })
 
      const tokens = await this.issueTokens(user.id)
-     console.log(tokens);
      return {user : this.returnUserFields(user),
              ...tokens
       }
