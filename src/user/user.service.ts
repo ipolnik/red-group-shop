@@ -61,7 +61,6 @@ export class UserService {
       const user = await this.byId(userId)
 
       if (!user) throw new NotFoundException('User not found')
-
       const isExist = user.favorites.some(product => product.id === productId )
          await this.prisma.user.update({
             where: {
@@ -75,7 +74,6 @@ export class UserService {
                }
             }
          })
-      return "Success"
+      return {message: "Success"}
    }
-   
 }
